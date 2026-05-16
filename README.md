@@ -114,22 +114,6 @@ An **8-step ML pipeline** classifies every node in the city as High / Medium / L
 8. **Police deployment** — 10 police officers are assigned to the 10 nodes with the highest raw incident rates
 
 ---
-
-## Flood Simulation (`flood_simulation.py`)
-
-A disaster event that stress-tests the entire system:
-
-1. The existing river nodes are taken as the initial flood zone
-2. A random river cell is chosen as an origin; a tributary of 3–5 cells is grown outward by random walk
-3. Every edge touching a flooded cell has a **75% chance of being blocked**
-4. All flooded nodes are marked `accessible = False`
-5. All edge costs across the graph are recalculated
-6. If a rescue mission was active, A* immediately reroutes around the new blockages
-
-Flood can be reset from the UI — a fresh river is procedurally generated and all blocked states are cleared.
-
----
-
 ## Running the Project
 
 ```bash
